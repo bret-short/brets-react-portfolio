@@ -5,6 +5,7 @@ import gamerPortal from '../../assets/images/gamer-portal.png';
 import ohSnap from '../../assets/images/oh-snap.png';
 import pizzaHunt from '../../assets/images/pizza-hunt.png';
 import budgetTracker from '../../assets/images/budget-tracker.png';
+import foodFestival from '../../assets/images/food-festival.png'
 
 function Portfolio(props) {
 	return (
@@ -34,6 +35,11 @@ function Portfolio(props) {
 				githubLink='https://github.com/bret-short/pizza-hunt'
 				deployedLink='https://protected-earth-62284.herokuapp.com/'
 				projectImage={pizzaHunt}></Project>
+				<Project
+				name='Food Festival'
+				githubLink='https://github.com/bret-short/food-festival'
+				deployedLink='https://bret-short.github.io/food-festival/'
+				projectImage={foodFestival}></Project>
 		</div>
 	);
 }

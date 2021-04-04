@@ -9,6 +9,10 @@
   --dark-primary: #171a21;
 }
 
+#about {
+  background-color: #7a93ac;
+}
+
 html {
   background-color: white;
   color: #555;
@@ -55,6 +59,10 @@ header nav ul li span a {
   color: white;
 }
 
+.main-nav {
+  cursor: pointer;
+}
+
 .nav-active {
   text-decoration: underline;
   color: white;
@@ -95,17 +103,18 @@ section {
   padding: 30px 0 0 0;
   margin: 0 auto;
   display: block;
+  border-radius: 10px;
 }
 
 .contact-section {
   background-color: var(--primary);
-  color: white;
+  color: var(--dark-primary);
   height: 90.5vh;
 }
 
 #contact-form {
   margin: 0px auto;
-  width: 60%;
+  width: 80%;
 }
 
 .contact-form-item {
@@ -113,7 +122,14 @@ section {
 }
 
 .contact-form-input {
-  width: 30%;
+  width: 50%;
+  border-radius: 6px;
+}
+
+#btn {
+  border-radius: 100px;
+  padding: 10px 20px;
+  background-color: #afb3f7;
 }
 
 #btn:link,
@@ -195,6 +211,7 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background-color: var(--dark-primary);
   /* height: 90.5vh; */
 }
 
@@ -205,15 +222,19 @@ footer {
 
 .project-img {
   height: auto;
-  width: 40vw;
+  width: 42vw;
   display: block;
   position: relative;
+  border: var(--primary);
+  border-width: 8px;
+  border-style: solid;
+  border-radius: 5px;
 }
 
 .github-img {
   height: 30px;
   width: 30px;
-  fill: white;
+  fill: #afb3f7;
 }
 
 .image-container {
@@ -223,9 +244,14 @@ footer {
 }
 
 .project-name {
-  color: #afb3f7;
-  margin-right: 20px;
+  color: #f87060;
+  font-size: 40px;
+  margin-right: 10px;
   text-decoration: none;
+}
+
+.section-text {
+  color: #171a21;
 }
 
 /* Mobile */

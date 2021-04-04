@@ -10,12 +10,12 @@ function Resume() {
 					<a
 						href='https://docs.google.com/document/d/1IMmaSrUrRnRVC4IDbuSOZkHdggbSu0kuul52eoigcHs/edit?usp=sharing'
 						target='_blank' rel="noreferrer">
-						resume
+						Résumé
 					</a>
 				</p>
 				<br />
 
-				<h2>Front End</h2>
+				<h2>Front End Skills</h2>
 				<ul>
 					<li>HTML</li>
 					<li>CSS</li>
@@ -27,7 +27,7 @@ function Resume() {
 				</ul>
 				<br />
 
-				<h2>Back End</h2>
+				<h2>Back End Skills</h2>
 				<ul>
 					<li>API's</li>
 					<li>Node.js</li>
