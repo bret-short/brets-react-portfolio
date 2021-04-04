@@ -6,16 +6,17 @@ function Project(props) {
 
 	return (
 		<div id='projects'>
-			<img src={projectImage} className='project-img'></img>
+			<img src={projectImage} className='project-img' alt="images of my projects"></img>
 			<div className='image-container'>
 				<h1>
 					<a
 						href={deployedLink}
-						target='_blank'
+                        target='_blank'
+                        rel="noreferrer"
 						className='project-name'>
 						{name}
 					</a>
-					<a href={githubLink} target='_blank'>
+					<a href={githubLink} target='_blank' rel="noreferrer">
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							className='github-img'

@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from '../Project/Project';
+import Project from '../Project';
 import iMemeit from '../../assets/images/imemeit.png';
 import gamerPortal from '../../assets/images/gamer-portal.png';
 import ohSnap from '../../assets/images/oh-snap.png';

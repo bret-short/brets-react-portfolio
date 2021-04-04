@@ -1,13 +1,361 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary: #7a93ac;
+  --dark-primary: #171a21;
+}
+
+html {
+  background-color: white;
+  color: #555;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #617073;
+  background-attachment: fixed;
+  z-index: 9999;
+  padding: 5px 0 7.5px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+}
+
+header nav ul li span {
+  margin: 0 50px 0 50px;
+  color: white;
+  padding: 10px 15px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+  text-decoration: none;
+}
+
+header nav ul li span:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+header nav ul li span a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-active {
+  text-decoration: underline;
+  color: white;
+}
+
+section {
+  padding: 60px;
+}
+.section-title {
+  padding: 10px 0 0 0;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.section-title:after {
+  display: block;
+  height: 2px;
+  background-color: #555;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.section-text {
+  padding: 30px 0 30px 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  line-height: 1.5em;
+  margin: 0 100px;
+}
+
+.headshot {
+  height: 300px;
+  width: auto;
+  padding: 30px 0 0 0;
+  margin: 0 auto;
+  display: block;
+}
+
+.contact-section {
+  background-color: var(--primary);
+  color: white;
+  height: 90.5vh;
+}
+
+#contact-form {
+  margin: 0px auto;
+  width: 60%;
+}
+
+.contact-form-item {
+  margin-top: 20px !important;
+}
+
+.contact-form-input {
+  width: 30%;
+}
+
+#btn:link,
+#btn:visited {
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color: white;
+  border: 1px solid white;
+  color: var(--primary);
+  margin-right: 15px;
+  width: 12%;
+}
+
+#btn:hover {
+  background-color: var(--primary);
+  border: 1px solid white;
+  color: white;
+}
+
+.cover-photo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./assets/images/cover-image.jpg");
+  background-size: cover;
+  height: 1000px;
+}
+
+.cover-text-box {
+  margin: 300px auto;
+  width: 45%;
+}
+
+.cover-text-box h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 240%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+.btn {
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: white;
+  margin-right: 15px;
+  width: 12%;
+}
+
+.btn:hover {
+  background-color: var(--dark-primary);
+  color: white;
+}
+footer {
+  padding: 10px 0;
+  background-color: var(--dark-primary);
+}
+
+.footer-li {
+  margin-left: 20%;
+  display: inline-block;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* height: 90.5vh; */
+}
+
+#projects {
+  margin: 20px;
+  position: relative;
+}
+
+.project-img {
+  height: auto;
+  width: 40vw;
+  display: block;
+  position: relative;
+}
+
+.github-img {
+  height: 30px;
+  width: 30px;
+  fill: white;
+}
+
+.image-container {
+  top: 50px;
+  left: 25px;
+  position: absolute;
+}
+
+.project-name {
+  color: #afb3f7;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+/* Mobile */
+/* @media screen and (max-width: 1440px) {
+	.section-text {
+		margin: 0;
+		padding: 10px;
+	}
+	.container {
+		border: solid var(--primary);
+		margin: 20px 0;
+	}
+	#testimonials {
+		margin: 0;
+	}
+	.quote,
+	.cite {
+		margin: 0;
+	}
+	.contact-container {
+		margin: 20px 0;
+	}
+} */
+
+@media screen and (max-width: 1024px) {
+  header nav ul li a {
+    margin: 0 10px 0 10px;
+    font-size: 2.5vw;
+    color: white;
+    font-weight: 300;
+  }
+
+  header nav ul li span {
+    margin: 0 10px 0 10px !important;
+    font-size: 2.5vw !important;
+    color: white !important;
+    font-weight: 300 !important;
+  }
+
+  .section-text {
+    margin: 80px !important;
+    font-size: 80% !important;
+  }
+
+  .btn {
+    width: 20% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav ul li a {
+    margin: 0 5px 0 5px;
+    font-size: 2.5vw;
+    color: white;
+    font-weight: 300;
+  }
+
+  header nav ul li span {
+    margin: 0 5px 0 5px !important;
+    font-size: 2.5vw !important;
+    color: white !important;
+    font-weight: 300 !important;
+  }
+
+  .cover-text-box h1 {
+    font-size: 180% !important;
+  }
+
+  .image-container {
+    top: 10px !important;
+    left: 10px !important;
+    position: absolute !important;
+    font-size: 65% !important;
+  }
+
+  .contact-form-input {
+    width: 50% !important;
+  }
+
+  .btn {
+    width: 27% !important;
+  }
+}
+
+/* Media screen formatting */
+@media screen and (max-width: 425px) {
+  header nav ul li a {
+    font-size: 5vw;
+    font-weight: 300;
+    margin: 0;
+    color: white;
+    padding: 0;
+  }
+
+  header nav ul li span {
+    font-size: 5vw !important;
+    font-weight: 300 !important;
+    margin: 0 !important;
+    color: white !important;
+    padding: 0 !important;
+  }
+
+  .cover-text-box h1 {
+    font-size: 150% !important;
+  }
+
+  .cover-text-box {
+    width: 100% !important;
+  }
+
+  .section-text {
+    margin: 0px !important;
+  }
+
+  .flex-display {
+    display: block !important;
+  }
+
+  .project-img {
+    width: 90vw !important;
+  }
+
+  #contact-form {
+    width: 100vw !important;
+  }
+
+  .resume-container {
+    width: 100vw !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 
 function Navigation(props) {
-  const { pages = [], activePage, setActivePage } = props;
+  const { activePage, setActivePage } = props;
 
   return (
     <header>
@@ -10,7 +10,7 @@ function Navigation(props) {
         <ul className="main-nav">
           <li className={`${activePage === "homepage" && "nav-active"}`}>
             <span onClick={() => setActivePage("homepage")}>
-              <a href="#">Bret's React Portfolio</a>
+              <a href="/">Bret's React Portfolio</a>
             </span>
           </li>
           <li className={`${activePage === "about" && "nav-active"}`}>

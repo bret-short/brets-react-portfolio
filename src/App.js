@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Navigation from './components/Navigation';
+import Cover from './components/Header';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import ContactForm from './components/Contact';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const pages = ['homepage', 'about', 'project', 'contact', 'resume'];
+	const [activePage, setActivePage] = useState(pages[0]);
+
+	function conditionalNav() {
+		if (activePage === 'about' || activePage === 'homepage') {
+			return (
+				<>
+					<Cover></Cover>
+					<About></About>
+				</>
+			);
+		} else if (activePage === 'project') {
+			return <Portfolio></Portfolio>;
+		} else if (activePage === 'contact') {
+			return <ContactForm></ContactForm>;
+		} else if (activePage === 'resume') {
+			return <Resume></Resume>;
+		}
+	}
+
+	return (
+		<div className='App'>
+			<Navigation
+				pages={pages}
+				activePage={activePage}
+				setActivePage={setActivePage}></Navigation>
+			<main>{conditionalNav()}</main>
+			<Footer></Footer>
+		</div>
+	);
 }
 
 export default App;
