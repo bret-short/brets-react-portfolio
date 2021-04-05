@@ -1,6 +1,7 @@
 {
   "name": "brets-react-portfolio",
   "version": "0.1.0",
+  "homepage": "http://bret-short.github.io/brets-react-portfolio",
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^12.8.3",
