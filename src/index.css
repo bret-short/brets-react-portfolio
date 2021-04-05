@@ -254,6 +254,10 @@ footer {
   color: #171a21;
 }
 
+.resume-section {
+  margin: 18px 18px 18px 18px;
+}
+
 /* Mobile */
 /* @media screen and (max-width: 1440px) {
 	.section-text {
